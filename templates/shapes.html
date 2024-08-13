@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ shape_type|capitalize }} Shapes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ shape_type|capitalize }} Shapes</h1>
+    </header>
+    <div class="shapes-container">
+        <ul>
+            {% for shape in shapes_list %}
+                <li><a href="{{ url_for('shape_details', shape_type=shape_type, shape_name=shape) }}">{{ shape|capitalize }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <a href="{{ url_for('home') }}" class="back-button">Back to Home</a>
+</body>
+</html>

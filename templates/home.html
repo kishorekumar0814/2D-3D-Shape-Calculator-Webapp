@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Calculator - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Shape Calculator</h1>
+    </header>
+    <div class="home-container">
+        <div class="home-buttons">
+            <a href="{{ url_for('shapes', shape_type='2d') }}">Explore 2D Shapes</a>
+            <a href="{{ url_for('shapes', shape_type='3d') }}">Explore 3D Shapes</a>
+        </div>
+    </div>
+</body>
+</html>

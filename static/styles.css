@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem; /* Space between header and body */
+}
+
+/* Home Page */
+.home-container {
+    text-align: center;
+    margin: 2rem;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.home-buttons a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.home-buttons a:hover {
+    background-color: #45a049;
+}
+
+/* Shapes Page */
+.shapes-container {
+    text-align: center;
+    margin: 2rem;
+}
+
+.shapes-container ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.shapes-container ul li {
+    display: inline;
+}
+
+.shapes-container ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 1.25rem;
+}
+
+.shapes-container ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Shape Details Page */
+.shape-details {
+    text-align: center;
+    margin: 2rem;
+}
+
+.shape-details form {
+    margin-top: 1rem;
+}
+
+.shape-details label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.shape-details input {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.shape-details button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.shape-details button:hover {
+    background-color: #45a049;
+}
+
+/* Result Page */
+.result-page {
+    text-align: center;
+    margin: 2rem;
+}
+
+.result-page p {
+    font-size: 1.25rem;
+}
+
+.result-page .back-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.result-page .back-button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}

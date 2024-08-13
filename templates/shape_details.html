@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ shape_name|capitalize }} Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ shape_name|capitalize }} Details</h1>
+    </header>
+    <div class="shape-details">
+        <form method="POST">
+            {% if shape_name in ['square', 'circle', 'rectangle', 'triangle', 'ellipse'] %}
+                {% if shape_name == 'square' %}
+                    <label for="side">Side:</label>
+                    <input type="number" id="side" name="side" step="any" required>
+                {% elif shape_name == 'circle' %}
+                    <label for="radius">Radius:</label>
+                    <input type="number" id="radius" name="radius" step="any" required>
+                {% elif shape_name == 'rectangle' %}
+                    <label for="length">Length:</label>
+                    <input type="number" id="length" name="length" step="any" required>
+                    <label for="width">Width:</label>
+                    <input type="number" id="width" name="width" step="any" required>
+                {% elif shape_name == 'triangle' %}
+                    <label for="base">Base:</label>
+                    <input type="number" id="base" name="base" step="any" required>
+                    <label for="height">Height:</label>
+                    <input type="number" id="height" name="height" step="any" required>
+                {% elif shape_name == 'ellipse' %}
+                    <label for="semi_major_axis">Semi-Major Axis:</label>
+                    <input type="number" id="semi_major_axis" name="semi_major_axis" step="any" required>
+                    <label for="semi_minor_axis">Semi-Minor Axis:</label>
+                    <input type="number" id="semi_minor_axis" name="semi_minor_axis" step="any" required>
+                {% endif %}
+            {% elif shape_name in ['cube', 'sphere', 'cylinder', 'cone', 'pyramid'] %}
+                {% if shape_name == 'cube' %}
+                    <label for="side">Side:</label>
+                    <input type="number" id="side" name="side" step="any" required>
+                {% elif shape_name == 'sphere' %}
+                    <label for="radius">Radius:</label>
+                    <input type="number" id="radius" name="radius" step="any" required>
+                {% elif shape_name == 'cylinder' %}
+                    <label for="radius">Radius:</label>
+                    <input type="number" id="radius" name="radius" step="any" required>
+                    <label for="height">Height:</label>
+                    <input type="number" id="height" name="height" step="any" required>
+                {% elif shape_name == 'cone' %}
+                    <label for="radius">Radius:</label>
+                    <input type="number" id="radius" name="radius" step="any" required>
+                    <label for="height">Height:</label>
+                    <input type="number" id="height" name="height" step="any" required>
+                {% elif shape_name == 'pyramid' %}
+                    <label for="base_length">Base Length:</label>
+                    <input type="number" id="base_length" name="base_length" step="any" required>
+                    <label for="base_width">Base Width:</label>
+                    <input type="number" id="base_width" name="base_width" step="any" required>
+                    <label for="height">Height:</label>
+                    <input type="number" id="height" name="height" step="any" required>
+                {% endif %}
+            {% endif %}
+            <!-- <input type="checkbox" id="calculate_volume" name="calculate_volume"> -->
+            <br>
+            <!-- <label for="calculate_volume">Calculate Volume</label> -->
+            <button type="submit">Calculate</button>
+        </form>
+        <a href="{{ url_for('shapes', shape_type=shape_type) }}" class="back-button">Back to {{ shape_type|capitalize }} Shapes</a>
+    </div>
+</body>
+</html>
